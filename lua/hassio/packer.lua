@@ -39,5 +39,48 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   }
-  use 'vim-test/vim-test'
+  use {
+      "nvim-neotest/neotest",
+      opt = true,
+      wants = {
+          "plenary.nvim",
+          "nvim-treesitter",
+          "FixCursorHold.nvim",
+          "neotest-python",
+          "neotest-plenary",
+          "neotest-go",
+          "neotest-jest",
+          "neotest-vim-test",
+          "neotest-rust",
+      },
+      requires = {
+          "nvim-lua/plenary.nvim",
+          "nvim-treesitter/nvim-treesitter",
+          "antoinemadec/FixCursorHold.nvim",
+          "nvim-neotest/neotest-python",
+          "nvim-neotest/neotest-plenary",
+          "nvim-neotest/neotest-go",
+          "haydenmeade/neotest-jest",
+          "nvim-neotest/neotest-vim-test",
+          "rouge8/neotest-rust",
+      },
+      module = { "neotest" },
+      config = function()
+          require("neotest").setup {
+              adapters = {
+                  require "neotest-python" {
+                      dap = { justMyCode = false },
+                      runner = "unittest",
+                  },
+                  require "neotest-jest",
+                  require "neotest-go",
+                  require "neotest-plenary",
+                  require "neotest-rust",
+                  require "neotest-vim-test" {
+                      ignore_file_types = { "python", "vim", "lua", "go", "rust" },
+                  },
+              },
+          }
+      end,
+  }
 end)
