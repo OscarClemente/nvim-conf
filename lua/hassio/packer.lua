@@ -14,7 +14,27 @@ return require('packer').startup(function(use)
   }
 
   use "savq/melange-nvim"
+  use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+          require('gitsigns').setup()
+      end
+  }
 
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+      config = function()
+          require("nvim-tree").setup{}
+      end
+  }
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons',
+    config = function()
+        require("bufferline").setup{}
+    end
+  }
 
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 

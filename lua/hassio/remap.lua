@@ -1,5 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "H", ':bprevious<CR>')
+vim.keymap.set("n", "L", ':bnext<CR>')
+vim.keymap.set("n", "<leader>q", ':NvimTreeToggle<CR>')
 
 -- neotest
 vim.keymap.set("n", "<leader>tn", function()
