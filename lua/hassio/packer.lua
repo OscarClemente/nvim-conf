@@ -9,7 +9,6 @@ return require('packer').startup(function(use)
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -27,11 +26,9 @@ return require('packer').startup(function(use)
           'nvim-tree/nvim-web-devicons', -- optional
       }
   }
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons',
-    config = function()
-        require("bufferline").setup()
-    end
-  }
+
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use { "moll/vim-bbye" }
 
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
