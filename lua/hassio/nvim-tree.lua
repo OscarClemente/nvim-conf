@@ -3,7 +3,7 @@ local function open_nvim_tree(data)
 
     local tree_cb = nvim_tree_config.nvim_tree_callback
 
-    require("nvim-tree").setup{
+    require("nvim-tree").setup {
         update_focused_file = {
             enable = true,
             update_cwd = true,
@@ -52,25 +52,25 @@ local function open_nvim_tree(data)
             mappings = {
                 list = {
                     { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-                    { key = "h", cb = tree_cb "close_node" },
-                    { key = "v", cb = tree_cb "vsplit" },
+                    { key = "h",                  cb = tree_cb "close_node" },
+                    { key = "v",                  cb = tree_cb "vsplit" },
                 },
             },
         },
     }
 
-  -- buffer is a directory
-  local directory = vim.fn.isdirectory(data.file) == 1
+    -- buffer is a directory
+    local directory = vim.fn.isdirectory(data.file) == 1
 
-  if not directory then
-    return
-  end
+    if not directory then
+        return
+    end
 
-  -- change to the directory
-  vim.cmd.cd(data.file)
+    -- change to the directory
+    vim.cmd.cd(data.file)
 
-  -- open the tree
-  require("nvim-tree.api").tree.open()
+    -- open the tree
+    require("nvim-tree.api").tree.open()
 end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
