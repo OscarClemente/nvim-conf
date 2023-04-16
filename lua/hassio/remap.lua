@@ -68,7 +68,7 @@ keymap("n", "gR", "<cmd>Lspsaga rename ++project<CR>")
 -- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
 -- It also supports tagstack
 -- Use <C-t> to jump back
-keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
+keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
 
 -- Go to definition
 keymap("n", "gD", "<cmd>Lspsaga goto_definition<CR>")
