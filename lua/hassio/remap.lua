@@ -5,7 +5,7 @@ vim.keymap.set("n", "H", ':bprevious<CR>')
 vim.keymap.set("n", "L", ':bnext<CR>')
 vim.keymap.set("n", "<leader>q", ':NvimTreeToggle<CR>')
 vim.keymap.set("n", "<leader>c", ':Bdelete!<CR>')
-vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, opts)
+vim.keymap.set("n", "<leader>F", function() vim.lsp.buf.format() end, opts)
 
 -- Window movements
 vim.keymap.set("n", "<C-h>", '<C-w>h')
