@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
         }
     }
 
-    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use { "moll/vim-bbye" } --clossing buffers
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
