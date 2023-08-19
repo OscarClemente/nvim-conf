@@ -58,7 +58,14 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
-    use 'simrat39/symbols-outline.nvim'
+    use({
+        'nvimdev/lspsaga.nvim',
+        after = 'nvim-lspconfig',
+        config = function()
+            require('lspsaga').setup({})
+        end,
+    })
+    --use 'simrat39/symbols-outline.nvim'
     use {
         "nvim-neotest/neotest",
         opt = true,
