@@ -12,6 +12,11 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    })
+
     use "savq/melange-nvim"
     use {
         'lewis6991/gitsigns.nvim',
