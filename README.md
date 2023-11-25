@@ -15,6 +15,14 @@ n - "L" - right\
 n - " c" - close\
 n - " F" - format
 
+### quickfix list
+n - " sc" - close\
+n - " so" - open\
+n - " sj" - down on list\
+n - " sk" - up on list\
+n - " sh" - open previous quickfix list\
+n - " sn" - open next quickfix list
+
 ### Window movements
 n - "C-h" - left\
 n - "C-j" - down\
@@ -55,7 +63,7 @@ n - " li" - list of incoming calls into current function\
 n - " lo" - list of calls from this function onto others\
 n, t . " T" - toggle terminal
 
-### treesitter
+### telescope
 n - " ff" - find file\
 n - " fg" - find within file (grep)\
 n - " fb" - find buffers\

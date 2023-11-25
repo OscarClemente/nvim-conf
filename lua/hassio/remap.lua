@@ -7,6 +7,14 @@ vim.keymap.set("n", "<leader>q", ':NvimTreeToggle<CR>')
 vim.keymap.set("n", "<leader>c", ':Bdelete!<CR>')
 vim.keymap.set("n", "<leader>F", function() vim.lsp.buf.format() end, opts)
 
+-- QuickFix list
+vim.keymap.set("n", " sc", ':cclose<CR>')
+vim.keymap.set("n", " so", ':copen<CR>')
+vim.keymap.set("n", " sj", ':cn<CR>')
+vim.keymap.set("n", " sk", ':cp<CR>')
+vim.keymap.set("n", " sh", ':col<CR>')
+vim.keymap.set("n", " sn", ':cnew<CR>')
+
 -- Window movements
 vim.keymap.set("n", "<C-h>", '<C-w>h')
 vim.keymap.set("n", "<C-j>", '<C-w>j')
