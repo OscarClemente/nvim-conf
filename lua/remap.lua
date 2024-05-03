@@ -4,7 +4,7 @@ vim.keymap.set("n", "L", ":bnext<CR>")
 vim.keymap.set("n", "<leader>b", ":BufDel<CR>")
 vim.keymap.set("n", "<leader>B", ":BufDelOthers<CR>")
 vim.keymap.set("n", "<leader>F", function()
-	vim.lsp.buf.format()
+	vim.lsp.buf.format({ async = true })
 end, {})
 
 -- QuickFix list
