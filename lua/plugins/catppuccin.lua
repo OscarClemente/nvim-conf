@@ -4,6 +4,12 @@ return {
 	name = "catppuccin",
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme "catppuccin-mocha"
-	end
+		require("catppuccin").setup({
+			integrations = {
+				neotree = true,
+				neotest = true,
+			},
+		})
+		vim.cmd.colorscheme("catppuccin-mocha")
+	end,
 }
