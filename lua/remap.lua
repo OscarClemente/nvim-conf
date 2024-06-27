@@ -16,10 +16,10 @@ vim.keymap.set("n", "<leader>sh", ":col<CR>")
 vim.keymap.set("n", "<leader>sn", ":cnew<CR>")
 
 -- Window movements
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
+--vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
+--vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
+--vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
+--vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
 -- neotest
 vim.keymap.set("n", "<leader>tn", function()
